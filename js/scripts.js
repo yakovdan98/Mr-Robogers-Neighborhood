@@ -1,5 +1,5 @@
 //Business Logic
-function beepBoop(number) {
+function beepBoop(number, name) {
   const arrayNums = [];
   for (let i = 0; i <= number; i++) {
     let num = i.toString();
@@ -23,7 +23,7 @@ function beepBoop(number) {
       arrayNums.push("Boop!");
     }
     else if (type === 3) {//insert Won't you be my neighbor?
-      arrayNums.push("Won't you be my neighbor?");
+      arrayNums.push("Won't you be my neighbor, " + name + "?");
     }
     else {
       arrayNums.push(i);
@@ -38,17 +38,18 @@ function beepBoop(number) {
 function processOutput(event) {
   event.preventDefault();
   const num = document.getElementById("numberBox").value;
-  if(num < 0) { //error handling 
+  const name = document.getElementById("name").value;
+  if (num < 0) { //error handling 
     document.getElementById("outputText").innerText = "Please Enter a number 0 or above";
   }
   else {
-    const output = beepBoop(num);
+    const output = beepBoop(num, name);
     document.getElementById("outputText").innerText = output.join(", ");
     document.getElementById(numberbox)
   }
 }
 
-function scrollToBottom(){
+function scrollToBottom() {
   document.getElementById("pageBottom").scrollIntoView();
 }
 
