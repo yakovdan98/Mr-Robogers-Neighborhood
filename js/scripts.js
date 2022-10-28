@@ -48,6 +48,11 @@ function processOutput(event) {
   }
 }
 
+function scrollToBottom(){
+  document.getElementById("pageBottom").scrollIntoView();
+}
+
 window.addEventListener("load", function () {
   this.document.getElementById("inputForm").addEventListener("submit", processOutput);
+  this.document.getElementById("scroll").addEventListener("click", scrollToBottom);
 });
