@@ -38,7 +38,7 @@ function beepBoop(number) {
 function processOutput(event) {
   event.preventDefault();
   const num = document.getElementById("numberBox").value;
-  if(num < 0) {
+  if(num < 0) { //error handling 
     document.getElementById("outputText").innerText = "Please Enter a number 0 or above";
   }
   else {

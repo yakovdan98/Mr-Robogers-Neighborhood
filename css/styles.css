@@ -1,0 +1,20 @@
+body {
+  background-color: antiquewhite;
+}
+
+.jumbotron {
+  background: url("https://www.lionsroar.com/wp-content/uploads/2019/09/fredrogers-feature-1024x585.jpg");
+  background-size: cover;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  background-color: bisque;
+  text-align: center;
+}
+
+.container {
+  background-color:rgb(250, 220, 180);
+}
+.content {
+  text-align: center;
+  height: 70vh;
+}
