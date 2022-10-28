@@ -38,8 +38,14 @@ function beepBoop(number) {
 function processOutput(event) {
   event.preventDefault();
   const num = document.getElementById("numberBox").value;
-  const output = beepBoop(num);
-  document.getElementById("outputText").innerText = output.toString();
+  if(num < 0) {
+    document.getElementById("outputText").innerText = "Please Enter a number 0 or above";
+  }
+  else {
+    const output = beepBoop(num);
+    document.getElementById("outputText").innerText = output.join(", ");
+    document.getElementById(numberbox)
+  }
 }
 
 window.addEventListener("load", function () {
