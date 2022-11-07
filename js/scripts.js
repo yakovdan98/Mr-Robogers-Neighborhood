@@ -45,7 +45,6 @@ function processOutput(event) {
   else {
     const output = beepBoop(num, name);
     document.getElementById("outputText").innerText = output.join(", ");
-    document.getElementById(numberbox)
   }
 }
 
